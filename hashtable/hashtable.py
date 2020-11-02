@@ -59,6 +59,11 @@ class HashTable:
         """
 
         # Your code here
+        hash = 14695981039346656037
+        for i in key:
+            hash = hash * 1099511628211
+            hash = hash ^ ord(i)
+        return hash
 
 
     def djb2(self, key):
